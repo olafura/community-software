@@ -2,6 +2,7 @@
 layout: page
 title: Charter
 permalink: /charter/
+body_class: doc charter
 ---
 
 # The community-software.org Charter

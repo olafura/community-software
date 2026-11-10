@@ -322,12 +322,12 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
   padding: 0.25rem 0.65rem;
   border-radius: 999px;
 }
-.l-first  { background: var(--l-first);  color: var(--l-first-ink); }
-.l-repro  { background: var(--l-repro);  color: var(--l-repro-ink); }
-.l-docs   { background: var(--l-docs);   color: var(--l-docs-ink); }
-.l-design { background: var(--l-design); color: var(--l-design-ink); }
-.l-l10n   { background: var(--l-l10n);   color: var(--l-l10n-ink); }
-.l-a11y   { background: var(--l-a11y);   color: var(--l-a11y-ink); }
+.l-first,  .prose .l-first { background: var(--l-first);  color: var(--l-first-ink); }
+.l-repro,  .prose .l-repro { background: var(--l-repro);  color: var(--l-repro-ink); }
+.l-docs,   .prose .l-docs { background: var(--l-docs);   color: var(--l-docs-ink); }
+.l-design, .prose .l-design { background: var(--l-design); color: var(--l-design-ink); }
+.l-l10n,   .prose .l-l10n { background: var(--l-l10n);   color: var(--l-l10n-ink); }
+.l-a11y,   .prose .l-a11y { background: var(--l-a11y);   color: var(--l-a11y-ink); }
 
 /* Healthy */
 
@@ -479,7 +479,7 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
 .prose h3 { font-size: 1.35rem; margin: 2rem 0 0.6rem; }
 .prose p, .prose li { color: var(--ink-soft); }
 .prose strong { color: var(--ink); }
-.prose ul, .prose ol { padding-left: 1.4rem; margin: 0 0 1rem; }
+.prose ul { padding-left: 1.4rem; margin: 0 0 1rem; }
 .prose li { margin-bottom: 0.4rem; }
 .prose li::marker { color: var(--clay); }
 .prose blockquote {
@@ -515,3 +515,181 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
 .prose th { color: var(--ink); font-weight: 700; }
 .prose td code { white-space: nowrap; }
 .prose td { color: var(--ink-soft); }
+
+
+/* Ordered lists read as steps on every document page */
+.prose ol {
+  list-style: none;
+  counter-reset: step;
+  margin: 1rem 0 1.5rem;
+  padding: 0;
+}
+.prose ol > li {
+  counter-increment: step;
+  position: relative;
+  padding: 0 0 1rem 2.75rem;
+  margin: 0;
+}
+.prose ol > li:last-child { padding-bottom: 0; }
+.prose ol > li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  background: var(--clay-soft);
+  color: var(--clay);
+}
+.prose ol > li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 0.93rem;
+  top: 2.1rem;
+  bottom: 0.2rem;
+  width: 2px;
+  background: var(--line);
+}
+
+/* Document page backdrop and footer */
+body.doc main {
+  background:
+    radial-gradient(40rem 18rem at 85% 0%, var(--clay-soft), transparent 70%),
+    radial-gradient(34rem 16rem at 0% 6rem, var(--green-soft), transparent 70%);
+  background-repeat: no-repeat;
+}
+.doc-foot {
+  margin-top: 3.5rem;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) + 4px);
+  background: var(--card);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+}
+.doc-foot p {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+/* Charter page */
+.charter .prose { max-width: 50rem; }
+.charter .prose h1 + p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  line-height: 1.3;
+  color: var(--green);
+  margin-top: -0.5rem;
+}
+.charter .prose h1 + p strong { color: inherit; font-weight: 400; }
+.charter .prose h1 + p + p { font-size: clamp(1.15rem, 2.2vw, 1.3rem); }
+
+.charter .prose h3 {
+  font-size: clamp(1.4rem, 2.8vw, 1.7rem);
+  margin-top: 2.25rem;
+  padding-top: 2.25rem;
+  border-top: 1px solid var(--line);
+}
+.charter .prose h2 + h3 { border-top: 0; padding-top: 0; }
+.charter .prose h3 .num {
+  display: block;
+  font-weight: 400;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  color: var(--clay);
+  margin-bottom: 0.35rem;
+}
+@media (min-width: 64rem) {
+  .charter .prose h3 { position: relative; }
+  .charter .prose h3 .num {
+    position: absolute;
+    right: calc(100% + 1.75rem);
+    top: 2.15rem;
+    font-size: 2.4rem;
+    letter-spacing: 0;
+    line-height: 1;
+  }
+  .charter .prose h2 + h3 .num { top: -0.1rem; }
+}
+
+/* Do / Don't side by side */
+.charter .prose ul:has(> li:first-child > strong:first-child) {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+.charter .prose ul:has(> li:first-child > strong:first-child) > li {
+  margin: 0;
+  padding: 1rem 1.15rem;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  color: var(--ink);
+}
+.charter .prose ul:has(> li:first-child > strong:first-child) > li:first-child { background: var(--green-soft); }
+.charter .prose ul:has(> li:first-child > strong:first-child) > li:nth-child(2) { background: var(--clay-soft); }
+.charter .prose ul:has(> li:first-child > strong:first-child) > li > strong:first-child { display: block; margin-bottom: 0.2rem; }
+.charter .prose ul:has(> li:first-child > strong:first-child) > li:first-child > strong { color: var(--green); }
+.charter .prose ul:has(> li:first-child > strong:first-child) > li:nth-child(2) > strong { color: var(--clay); }
+
+/* Coloured labels in the charter table */
+.charter .prose td code.label {
+  font-size: 0.78rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+}
+.charter .prose td:nth-child(2) { color: var(--ink); font-weight: 700; }
+
+/* The issue-form note and the closing line */
+.charter .prose blockquote {
+  padding: 1.1rem 1.25rem;
+  font-size: 1rem;
+}
+.charter .prose hr + p {
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  line-height: 1.35;
+  color: var(--ink);
+  text-align: center;
+  max-width: 34rem;
+  margin: 0 auto;
+}
+.charter .doc-foot {
+  border: 0;
+  background: none;
+  padding: 0;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+.charter .doc-foot p { display: none; }
+
+.prose h1 { overflow-wrap: anywhere; }
+@media (min-width: 40rem) {
+  .prose h1 .domain { white-space: nowrap; }
+}
+
+/* Tables become stacked cards on narrow screens */
+@media (max-width: 40rem) {
+  .prose table, .prose tbody, .prose tr, .prose td { display: block; }
+  .prose thead { display: none; }
+  .prose tr {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .prose td { border: 0; padding: 0.15rem 0; }
+  .prose td:first-child { margin-bottom: 0.35rem; }
+}

@@ -1,6 +1,25 @@
 ---
 layout: default
 ---
+{%- assign html = content | replace: "community-software.org Charter</h1>", '<span class="domain">community-software.org</span> Charter</h1>' -%}
+{%- if page.body_class contains "charter" -%}
+  {%- for i in (1..9) -%}
+    {%- assign from = '">' | append: i | append: ". " -%}
+    {%- assign to = '"><span class="num">0' | append: i | append: "</span> " -%}
+    {%- assign html = html | replace: from, to -%}
+  {%- endfor -%}
+  {%- assign labels = "good-first-contribution|l-first,needs-reproduction|l-repro,docs-help|l-docs,needs-design-feedback|l-design,translation|l-l10n,accessibility|l-a11y" | split: "," -%}
+  {%- for item in labels -%}
+    {%- assign parts = item | split: "|" -%}
+    {%- assign from = '">' | append: parts[0] | append: "</code>" -%}
+    {%- assign to = ' label ' | append: parts[1] | append: '">' | append: parts[0] | append: "</code>" -%}
+    {%- assign html = html | replace: from, to -%}
+  {%- endfor -%}
+{%- endif %}
   <article class="wrap prose">
-{{ content }}
+{{ html }}
+    <aside class="doc-foot">
+      <p>Something here unclear, or could it be kinder?</p>
+      <a class="btn btn-ghost" href="https://github.com/olafura/community-software/edit/main/{{ page.path }}">Suggest a change</a>
+    </aside>
   </article>

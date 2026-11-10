@@ -1,8 +1,14 @@
+---
+layout: page
+title: Security
+permalink: /security/
+---
+
 # Security
 
 ## Reporting a vulnerability
 
-Please **don't** open a public issue for a security problem. Write to **security@community-software.org** with:
+Please **don't** open a public issue for a security problem. Write to **[security@community-software.org](mailto:security@community-software.org)** with:
 
 - what the problem is and where it occurs
 - the steps to reproduce it, or a proof of concept

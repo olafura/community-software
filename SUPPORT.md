@@ -1,3 +1,9 @@
+---
+layout: page
+title: Support
+permalink: /support/
+---
+
 # Getting help
 
 Real people answer questions here, in their spare time. There's no guaranteed response time, but there's a good chance someone can help.
@@ -8,7 +14,7 @@ Real people answer questions here, in their spare time. There's no guaranteed re
 - **Something is broken**: open a bug report using the issue form.
 - **An idea or request**: open a feature request, and tell us how you could help.
 - **Security problems**: please don't post them publicly. See [SECURITY.md](SECURITY.md).
-- **Conduct concerns**: write to conduct@community-software.org.
+- **Conduct concerns**: write to [conduct@community-software.org](mailto:conduct@community-software.org).
 
 ## Getting a good answer
 

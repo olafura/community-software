@@ -1,3 +1,9 @@
+---
+layout: page
+title: Governance
+permalink: /governance/
+---
+
 # Governance
 
 We keep governance light. These principles come from our [charter](COMMUNITY.md).

@@ -1,0 +1,5 @@
+title: community-software.org
+description: A community of peers building free software together, in the open. Read our charter and find your way to contribute.
+
+exclude:
+  - README.md

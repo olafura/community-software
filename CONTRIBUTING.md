@@ -1,3 +1,9 @@
+---
+layout: page
+title: Contributing
+permalink: /contributing/
+---
+
 # Contributing
 
 Thanks for being here. You don't need permission to help, and you don't need to write code. If you make the project better in any way, you are a contributor.

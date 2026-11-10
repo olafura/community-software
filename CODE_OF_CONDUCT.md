@@ -1,3 +1,9 @@
+---
+layout: page
+title: Code of Conduct
+permalink: /code-of-conduct/
+---
+
 # Code of Conduct
 
 Our full expectations are in the [charter](COMMUNITY.md). This page covers what that means day to day, and what happens when something goes wrong.
@@ -23,7 +29,7 @@ This applies in all project spaces: the repository, issues, chat, forums, events
 
 ## Reporting
 
-Write to **conduct@community-software.org**. A small group of volunteers reads every report in confidence. If a team member is involved, they will step aside from handling your report.
+Write to **[conduct@community-software.org](mailto:conduct@community-software.org)**. A small group of volunteers reads every report in confidence. If a team member is involved, they will step aside from handling your report.
 
 You don't need to be certain something broke the rules before you report it. We'd rather hear about it.
 

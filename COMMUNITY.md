@@ -1,3 +1,9 @@
+---
+layout: page
+title: Charter
+permalink: /charter/
+---
+
 # The community-software.org Charter
 
 **Software we build together, in the open.**
@@ -68,7 +74,7 @@ Just above the submit button on every issue form:
 
 If someone isn't following this charter, write to us. A small group of volunteers reads every message in confidence.
 
-**conduct@community-software.org**
+**[conduct@community-software.org](mailto:conduct@community-software.org)**
 
 1. **A conversation.** Usually a private, friendly note is all it takes.
 2. **A formal warning.** If the behavior continues.

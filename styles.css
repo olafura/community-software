@@ -1,12 +1,12 @@
 /* Community Software */
 
 :root {
-  --paper: #f7f2e9;
-  --paper-2: #efe7d8;
-  --card: #fffdf8;
-  --ink: #1f2a26;
-  --ink-soft: #4a5652;
-  --line: #ddd2bf;
+  --paper: #fafaf8;
+  --paper-2: #f2f2ef;
+  --card: #ffffff;
+  --ink: #1c1c1c;
+  --ink-soft: #4f4f4c;
+  --line: #e2e2dd;
   --green: #4d6a5d;
   --green-soft: #e8ece4;
   --clay: #b44a22;
@@ -30,12 +30,12 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #151b19;
-    --paper-2: #1b2320;
-    --card: #1f2825;
-    --ink: #ece6da;
-    --ink-soft: #b3b9b3;
-    --line: #34403b;
+    --paper: #141414;
+    --paper-2: #1b1b1b;
+    --card: #1f1f1f;
+    --ink: #ececea;
+    --ink-soft: #b4b4b0;
+    --line: #333333;
     --green: #a3bcae;
     --green-soft: #212a26;
     --clay: #ee9a72;

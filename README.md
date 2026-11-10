@@ -1,6 +1,6 @@
-# community-software.org
+# Community Software
 
-**Software we build together, in the open.** · [community-software.org](https://community-software.org)
+**Software we build together, in the open.** · [Visit the website](https://community-software.org)
 
 We're not a company and you're not a customer. We're people who care about the same tools, sharing the work of making them better. Here's how we keep that fun and sustainable.
 

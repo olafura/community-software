@@ -5,7 +5,7 @@ permalink: /charter/
 body_class: doc charter
 ---
 
-# The community-software.org Charter
+# The Community Software Charter
 
 **Software we build together, in the open.**
 

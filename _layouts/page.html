@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{%- assign html = content | replace: "community-software.org Charter</h1>", '<span class="domain">community-software.org</span> Charter</h1>' -%}
+{%- assign html = content -%}
 {%- if page.body_class contains "charter" -%}
   {%- for i in (1..9) -%}
     {%- assign from = '">' | append: i | append: ". " -%}

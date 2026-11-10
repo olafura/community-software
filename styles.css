@@ -1,4 +1,4 @@
-/* community-software.org */
+/* Community Software */
 
 :root {
   --paper: #f7f2e9;
@@ -141,7 +141,6 @@ a:hover { color: var(--green); text-decoration-thickness: 3px; }
   font-weight: 700;
   font-size: 1.05rem;
 }
-.brand .tld { color: var(--ink-soft); font-weight: 400; }
 
 .site-header nav ul {
   display: flex;
@@ -678,9 +677,6 @@ body.doc main {
 .charter .doc-foot p { display: none; }
 
 .prose h1 { overflow-wrap: anywhere; }
-@media (min-width: 40rem) {
-  .prose h1 .domain { white-space: nowrap; }
-}
 
 /* Tables become stacked cards on narrow screens */
 @media (max-width: 40rem) {

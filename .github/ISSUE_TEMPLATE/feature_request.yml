@@ -1,0 +1,31 @@
+name: Feature idea
+description: Suggest something new or better.
+labels: ["idea"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: Describe the problem or need first, before any solution.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help?
+      description: Your idea for solving it. Rough is fine.
+  - type: dropdown
+    id: help
+    attributes:
+      label: How could you help make it happen?
+      multiple: true
+      options:
+        - Write a more detailed proposal
+        - Test early versions
+        - Write documentation
+        - Design it
+        - Build it
+        - Not right now, and that's okay
+  - type: markdown
+    attributes:
+      value: "**Remember:** Real people read every issue, and nobody is obligated to build a request. Maintainers may say \"no\" or \"not yet\" to keep the project focused. That's not a judgment of you."

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask a question
+    url: https://github.com/community-software/community-software/discussions
+    about: Questions and "how do I…?" belong in Discussions.
+  - name: Report a security problem
+    url: mailto:security@community-software.org
+    about: Please report vulnerabilities privately, not in a public issue.

@@ -1,0 +1,42 @@
+name: Bug report
+description: Something isn't working as expected.
+labels: ["needs-reproduction"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to report this. A clear report is a real contribution.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. …
+        2. …
+        3. …
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version and platform
+      placeholder: e.g. 1.4.2 on Fedora 41
+  - type: dropdown
+    id: help
+    attributes:
+      label: Can you help with this?
+      multiple: true
+      options:
+        - I can test a fix
+        - I can help document it
+        - I'd like to try fixing it
+        - Not right now, and that's okay
+  - type: markdown
+    attributes:
+      value: "**Remember:** Real people read every issue, and nobody is obligated to build a request. Want to help it happen? Tell us above whether you can test, document or code it."

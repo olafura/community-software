@@ -7,8 +7,8 @@
   --ink: #1f2a26;
   --ink-soft: #4a5652;
   --line: #ddd2bf;
-  --green: #285a48;
-  --green-soft: #dbe7df;
+  --green: #4d6a5d;
+  --green-soft: #e8ece4;
   --clay: #b44a22;
   --clay-soft: #f6e0d4;
   --focus: #1d5fd1;
@@ -36,8 +36,8 @@
     --ink: #ece6da;
     --ink-soft: #b3b9b3;
     --line: #34403b;
-    --green: #8cc7ad;
-    --green-soft: #22342d;
+    --green: #a3bcae;
+    --green-soft: #212a26;
     --clay: #ee9a72;
     --clay-soft: #3a2820;
     --focus: #8ab4ff;
@@ -86,12 +86,12 @@ p:last-child { margin-bottom: 0; }
 a {
   color: inherit;
   text-decoration: underline;
-  text-decoration-color: var(--green);
-  text-decoration-thickness: 1.5px;
+  text-decoration-color: color-mix(in srgb, var(--green) 55%, transparent);
+  text-decoration-thickness: 1px;
   text-underline-offset: 0.22em;
   transition: color 0.15s ease, text-decoration-thickness 0.15s ease;
 }
-a:hover { color: var(--green); text-decoration-thickness: 3px; }
+a:hover { color: var(--green); text-decoration-color: var(--green); text-decoration-thickness: 2px; }
 
 :focus-visible {
   outline: 3px solid var(--focus);
@@ -172,9 +172,6 @@ a:hover { color: var(--green); text-decoration-thickness: 3px; }
 
 .hero {
   padding: clamp(4rem, 12vw, 8rem) 0 clamp(3.5rem, 9vw, 6rem);
-  background:
-    radial-gradient(40rem 22rem at 85% 10%, var(--clay-soft), transparent 70%),
-    radial-gradient(36rem 20rem at 5% 90%, var(--green-soft), transparent 70%);
 }
 .eyebrow {
   font-size: 0.85rem;
@@ -555,13 +552,7 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
   background: var(--line);
 }
 
-/* Document page backdrop and footer */
-body.doc main {
-  background:
-    radial-gradient(40rem 18rem at 85% 0%, var(--clay-soft), transparent 70%),
-    radial-gradient(34rem 16rem at 0% 6rem, var(--green-soft), transparent 70%);
-  background-repeat: no-repeat;
-}
+/* Document page footer */
 .doc-foot {
   margin-top: 3.5rem;
   padding: 1.5rem 1.75rem;
